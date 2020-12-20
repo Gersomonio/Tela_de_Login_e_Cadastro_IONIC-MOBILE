@@ -1,0 +1,43 @@
+.divider {
+  display: flex;
+  
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+  }
+}
+.line {
+  align-items: center;
+  margin: 1em -1em;
+  color: #cccccc;
+  
+  &:before,
+  &:after {
+    height: 1px;
+    margin: 0 1em;
+  }
+} 
+.one-line {
+  &:before,
+  &:after {
+     background: #cccccc;
+  }
+}
+.auth-form ion-grid,
+.auth-form ion-row {
+    margin-top: 20%;
+    height: 87%;
+    justify-content: center;
+}
+.already {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+ion-content {
+  --background: url('../../assets/img/imagem2.jpg') no-repeat center center / cover !important;
+}
+.opacidade{
+  opacity: 70%;
+}

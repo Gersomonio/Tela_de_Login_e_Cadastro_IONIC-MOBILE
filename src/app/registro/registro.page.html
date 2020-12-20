@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="formregistro">
+    <ion-item lines="full">
+      <ion-label position="floating"><ion-icon name="person-outline"></ion-icon> Nome</ion-label>
+      <ion-input type="text" required></ion-input> <!--Required faz com que o campo seja obrigatório -->
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon> Confirmação de Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating"><ion-icon name="lock-closed-outline"></ion-icon> Senha</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating"><ion-icon name="lock-closed-outline"></ion-icon> Confirmação de Senha</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Registrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

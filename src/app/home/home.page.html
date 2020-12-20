@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bem-vindo!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form"> <!--Classe usada para estilização no .SCSS-->
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center> <!-- Vai alinhar as colunas para o centro -->
+        <ion-button class="opacidade" [routerLink]="['/registro']" expand="block" color="danger">Registro</ion-button>
+        <!--[routerLink] vai fazer a navegação entre componentes.-->
+        <span class="divider line one-line">ou</span>
+
+        <span class="already">Já é um usuário?</span>
+
+        <ion-button class="opacidade" [routerLink]="['/login']" expand="block" color="success">Entrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

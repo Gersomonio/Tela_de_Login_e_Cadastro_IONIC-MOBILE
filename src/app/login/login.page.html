@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<form class="formlogin" [formGroup]="formLogin" (ngSubmit)="login()"> <!-- [formGroup] serve para tratarmos o formulário no nosso arquivo-->
+    <ion-item class="opacidade" lines="full"> <!--Classe opacidade para adicionar opacity pelo SCSS-->
+      <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon> Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input> <!-- É com esse [formControlName] que vamos criar as validações.-->
+    </ion-item>
+    <div *ngIf="formLogin.controls.email.errors" class="px-3 text-danger">
+			<p *ngIf="formLogin.controls.email.errors.required"><small>Campo obrigatório</small></p> <!--CAMPOS PARA EXIBIR ERRO-->
+			<p *ngIf="formLogin.controls.email.errors.pattern"><small>Formato inválido</small></p>
+		</div>
+
+
+    <ion-item class="opacidade" lines="full">
+      <ion-label position="floating"><ion-icon name="lock-closed-outline"></ion-icon> Senha</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div *ngIf="formLogin.controls.email.errors" class="px-3 text-danger">
+			<p *ngIf="formLogin.controls.password.errors.required"><small>Campo obrigatório</small></p>
+		</div>
+
+    <ion-row>
+      <ion-col>                                      <!--O botão fica "transparente" enquanto os campos não forem preenchidos-->
+        <ion-button class="opacidade" type="submit" color="success" expand="block" [disabled]="!formLogin.valid" (click)="situacao()">Entrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
